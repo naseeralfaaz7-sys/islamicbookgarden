@@ -1,0 +1,129 @@
+<html>
+<head>
+<title>
+ISLAMIC BOOK GARDEN 
+</title>
+<link rel="stylesheet" href="home style.css">
+
+<style>
+
+/* Added login button style */
+
+.login-btn a{
+background:green;
+color:white;
+padding:8px 15px;
+text-decoration:none;
+border-radius:5px;
+}
+
+.login-btn a:hover{
+background:darkgreen;
+}
+
+</style>
+
+</head>
+
+<body>
+<div id="loader">
+Loading...
+</div>
+
+<center><h1>ISLAMIC BOOKS GARDEN</h1></center>
+
+<nav>
+<a href="home.html">HOME</a>
+<a href="book.html">BOOKS</a>
+<a href="cart.html">CART</a>
+<a href="contact.html">CONTACT</a>
+<a href="#" onclick="openAdmin()">ADMIN</a>
+</nav>
+
+<h2>WELCOME TO ISLAMIC BOOKS GARDEN</h2>
+
+<p>BEST ISLAMIC BOOKS AVAILABLE HERE</P>
+
+<h3>POPULAR BOOKS</h3>
+
+<div>
+<img src="book 1.jpg" width="150">
+<img src="book 2.jpeg" width="150">
+<img src="book 3.jpeg" width="150">
+<img src="book4.jpeg" width="150">
+<img src="book 5.jpeg" width="150">
+<img src="book 6.jpeg" width="150">
+</div>
+
+<div class="login-btn">
+<a href="login.html" id="loginLink">LOGIN</a>
+</div>
+
+<a href="https://wa.me/94755209926" class="whatsapp-float" target="_blank">
+💬
+</a>
+
+<script>
+
+function openAdmin(){
+
+var pass = prompt("Enter Admin Password");
+
+if(pass == "alfaaz"){
+
+window.location = "admin.html";
+
+}else{
+
+alert("Customer cannot access Admin page!");
+
+}
+
+}
+
+
+window.onload = function(){
+document.getElementById("loader").style.display = "none";
+}
+
+/* Added Login Logout System */
+
+function checkLogin(){
+
+let user = localStorage.getItem("user")
+
+if(user){
+
+let btn = document.getElementById("loginLink")
+
+btn.innerText="LOGOUT"
+
+btn.href="#"
+
+btn.onclick=function(){
+
+localStorage.removeItem("user")
+
+alert("Logged out")
+
+location.reload()
+
+}
+
+}
+
+}
+
+checkLogin()
+
+</script>
+
+<footer>
+
+<p>© 2026 Islamic Book Garden</p>
+
+
+</footer>
+
+</body>
+</html>

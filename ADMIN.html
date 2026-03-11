@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<title>Admin Panel - Islamic Book Shop</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+/* Reset */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+transition:all 0.3s ease;
+}
+
+/* Body */
+
+<script>
+
+var password = prompt("Enter Admin Password");
+
+if(password !== "admin123"){
+
+alert("Wrong Password! Access Denied");
+
+window.location.href = "home.html";
+
+}
+
+</script>
+
+body{
+
+background:linear-gradient(135deg,#6a5acd,#ff4da6);
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:20px;
+
+}
+
+/* Container */
+
+.container{
+
+width:90%;
+max-width:750px;
+
+background:white;
+
+padding:30px;
+
+border-radius:15px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+
+animation:fadeIn 0.8s ease;
+
+}
+
+/* Title */
+
+h1{
+
+text-align:center;
+
+margin-bottom:20px;
+
+color:#0b3d91;
+
+font-size:32px;
+
+}
+
+/* Section title */
+
+h3{
+
+margin-top:20px;
+margin-bottom:10px;
+
+color:#333;
+
+}
+
+/* Inputs */
+
+input{
+
+width:100%;
+
+padding:12px;
+
+margin-bottom:15px;
+
+border:2px solid #ddd;
+
+border-radius:8px;
+
+font-size:15px;
+
+}
+
+input:hover{
+
+border-color:#6a5acd;
+
+}
+
+input:focus{
+
+border-color:#ff4da6;
+
+outline:none;
+
+box-shadow:0 0 8px rgba(255,77,166,0.4);
+
+}
+
+/* Buttons */
+
+button{
+
+padding:10px 20px;
+
+border:none;
+
+border-radius:8px;
+
+background:linear-gradient(45deg,#6a5acd,#ff4da6);
+
+color:white;
+
+font-weight:bold;
+
+cursor:pointer;
+
+margin-top:5px;
+
+}
+
+button:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 6px 18px rgba(0,0,0,0.3);
+
+}
+
+/* Home button */
+
+.home-btn{
+
+display:inline-block;
+
+margin-bottom:15px;
+
+background:#0b3d91;
+
+}
+
+.home-btn:hover{
+
+background:#072b63;
+
+}
+
+/* Book list */
+
+.book{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+background:#f5f5f5;
+
+padding:12px;
+
+border-radius:10px;
+
+margin-top:10px;
+
+}
+
+.book:hover{
+
+background:#eaeaea;
+
+transform:scale(1.02);
+
+}
+
+/* Book image */
+
+.book img{
+
+width:60px;
+height:80px;
+
+object-fit:cover;
+
+border-radius:6px;
+
+}
+
+.book img:hover{
+
+transform:scale(1.1);
+
+}
+
+/* Book text */
+
+.book span{
+
+flex:1;
+
+margin-left:10px;
+
+font-weight:500;
+
+}
+
+/* Delete button */
+
+.delete{
+
+background:#ff4d4d;
+
+padding:6px 12px;
+
+border-radius:6px;
+
+}
+
+.delete:hover{
+
+background:#cc0000;
+
+}
+
+/* Animation */
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+
+.container{
+padding:20px;
+}
+
+.book{
+flex-direction:column;
+align-items:flex-start;
+gap:10px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<a href="home.html">
+<button class="home-btn">⬅ Back to Home</button>
+</a>
+
+<h1>Admin Panel</h1>
+
+<h3>Add Book</h3>
+
+<input type="text" id="bookName" placeholder="Book Name">
+
+<input type="number" id="bookPrice" placeholder="Book Price">
+
+<input type="text" id="bookImage" placeholder="Book Image URL">
+
+<button onclick="addBook()">Add Book</button>
+
+<h3>Book List</h3>
+
+<div id="bookList"></div>
+
+</div>
+
+<script>
+
+function addBook(){
+
+let name=document.getElementById("bookName").value
+let price=document.getElementById("bookPrice").value
+let image=document.getElementById("bookImage").value
+
+if(name=="" || price=="" || image==""){
+alert("Please enter all details")
+return
+}
+
+let books=JSON.parse(localStorage.getItem("books")) || []
+
+books.push({
+name:name,
+price:price,
+image:image
+})
+
+localStorage.setItem("books",JSON.stringify(books))
+
+document.getElementById("bookName").value=""
+document.getElementById("bookPrice").value=""
+document.getElementById("bookImage").value=""
+
+loadBooks()
+
+}
+
+function loadBooks(){
+
+let books=JSON.parse(localStorage.getItem("books")) || []
+
+let list=document.getElementById("bookList")
+
+list.innerHTML=""
+
+books.forEach((book,index)=>{
+
+list.innerHTML+=`
+
+<div class="book">
+
+<img src="${book.image}">
+
+<span>${book.name} - Rs.${book.price}</span>
+
+<button class="delete" onclick="deleteBook(${index})">Delete</button>
+
+</div>
+
+`
+
+})
+
+}
+
+function deleteBook(index){
+
+let books=JSON.parse(localStorage.getItem("books"))
+
+books.splice(index,1)
+
+localStorage.setItem("books",JSON.stringify(books))
+
+loadBooks()
+
+}
+
+loadBooks()
+
+</script>
+
+
+
+
+</body>
+</html>

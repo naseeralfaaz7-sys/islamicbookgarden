@@ -1,0 +1,229 @@
+/* Reset */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Sitka Text Semibold",Tahoma,Geneva,Verdana,sans-serif;
+font-size: 30px;
+}
+
+/* Body */
+
+body{
+
+background-image: url("bg5.jpg") no-repeat center center fixed;
+background-size: cover;
+
+color:#333;
+
+padding:20px;
+
+}
+
+/* Title */
+
+h1{
+
+text-align:center;
+
+color:#0b3d91;
+
+margin-bottom:20px;
+
+font-size:2.8rem;
+
+text-shadow:1px 1px 3px rgba(0,0,0,0.2);
+
+}
+
+/* Container */
+
+.container{
+
+width:90%;
+
+max-width:700px;
+
+margin:0 auto;
+
+background:rgba(255,255,255,0.15);
+
+padding:30px;
+
+border-radius:15px;
+
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
+
+backdrop-filter: blur(8px);
+
+}
+
+/* Section title */
+
+h3{
+
+margin-top:20px;
+
+margin-bottom:10px;
+
+color:#0b3d91;
+
+}
+
+/* Inputs */
+
+input{
+
+width:100%;
+
+padding:10px;
+
+margin-bottom:15px;
+
+border-radius:8px;
+
+border:2px solid #ccc;
+
+font-size:15px;
+
+transition:all 0.3s ease;
+
+}
+
+input:focus{
+
+border-color:#ff4da6;
+
+box-shadow:0 0 8px rgba(255,77,166,0.4);
+
+outline:none;
+
+}
+
+/* Main Button */
+
+button{
+
+padding:10px 20px;
+
+background:linear-gradient(45deg,#6a5acd,#ff4da6);
+
+border:none;
+
+color:white;
+
+font-weight:bold;
+
+border-radius:8px;
+
+cursor:pointer;
+
+transition:all 0.3s ease;
+
+}
+
+button:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+
+}
+
+/* Book List */
+
+.book{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+background:rgba(255,255,255,0.35);
+
+padding:10px;
+
+border-radius:10px;
+
+margin-top:10px;
+
+transition:0.3s;
+
+}
+
+.book:hover{
+
+background:rgba(255,255,255,0.5);
+
+}
+
+/* Book image */
+
+.book img{
+
+width:60px;
+
+height:80px;
+
+object-fit:cover;
+
+border-radius:6px;
+
+}
+
+/* Book text */
+
+.book span{
+
+flex:1;
+
+margin-left:10px;
+
+font-weight:bold;
+
+}
+
+/* Delete Button */
+
+.book button{
+
+background:#ff4d4d;
+
+padding:6px 12px;
+
+}
+
+.book button:hover{
+
+background:#e60000;
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.container{
+
+padding:20px;
+
+}
+
+h1{
+
+font-size:2rem;
+
+}
+
+.book{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:10px;
+
+}
+
+}

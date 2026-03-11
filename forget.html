@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Forgot Password</title>
+
+<style>
+
+body{
+font-family: Arial;
+background: linear-gradient(135deg,#ff4da6,#6a5acd);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.forgot-box{
+background:white;
+padding:40px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+width:300px;
+text-align:center;
+}
+
+.forgot-box h2{
+margin-bottom:20px;
+}
+
+.forgot-box input{
+width:100%;
+padding:10px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+.forgot-box button{
+width:100%;
+padding:10px;
+background:#6a5acd;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+font-size:16px;
+}
+
+.forgot-box button:hover{
+background:#ff4da6;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="forgot-box">
+
+<h2>Forgot Password</h2>
+
+<input type="text" id="user" placeholder="Enter Username">
+
+<button onclick="recover()">Get Password</button>
+
+<p id="result"></p>
+
+<p><a href="login.html">Back to Login</a></p>
+
+</div>
+
+<script>
+
+function recover(){
+
+let user=document.getElementById("user").value;
+
+let savedUser=localStorage.getItem("username");
+let savedPass=localStorage.getItem("password");
+
+if(user===savedUser){
+
+document.getElementById("result").innerHTML="Your Password: "+savedPass;
+
+}
+else{
+
+alert("Username not found");
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

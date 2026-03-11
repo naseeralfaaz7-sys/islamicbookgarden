@@ -1,0 +1,232 @@
+<style>
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body */
+body {
+    background: url("bg 6.jpg") no-repeat;
+	background-size: cover;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Centered H1 */
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    background: linear-gradient(45deg,#6a5acd,#ff4da6);
+    padding: 15px 0;
+    border-radius: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #fff;
+    color: #0b3d91;
+    transform: scale(1.1);
+}
+
+/* Headings */
+h2, h3 {
+    text-align: center;
+    margin: 20px 0;
+    color: white;
+}
+
+/* Paragraph */
+p {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    color: silv;
+}
+
+/* Books Container */
+div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-bottom: 50px;
+}
+
+/* Book Images / Cards */
+div img {
+    width: 150px;
+    height: 220px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+div img:hover {
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+
+/* LOGIN BUTTON RIGHT TOP */
+
+.login-btn{
+position: fixed;
+top: 20px;
+right: 20px;
+z-index: 1000;
+}
+
+.login-btn a{
+text-decoration:none;
+background:linear-gradient(45deg,#ff4da6,#6a5acd);
+color:white;
+padding:8px 18px;
+border-radius:20px;
+font-weight:bold;
+transition:0.4s;
+}
+
+.login-btn a:hover{
+transform:scale(1.1);
+box-shadow:0 0 15px pink;
+}
+
+
+
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+font-size:30px;
+width:60px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+z-index:1000;
+transition:0.3s;
+}
+
+.whatsapp-float:hover{
+transform:scale(1.1);
+}
+#loader{
+
+position:fixed;
+width:100%;
+height:100%;
+background:white;
+
+top:0;
+left:0;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+font-size:25px;
+color:#6a5acd;
+
+z-index:9999;
+
+}
+#loader::after{
+
+content:"";
+
+width:50px;
+height:50px;
+
+border:5px solid #ddd;
+border-top:5px solid #6a5acd;
+
+border-radius:50%;
+
+animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
+
+}
+footer{
+
+margin-top:40px;
+padding:20px;
+
+background:linear-gradient(45deg,#6a5acd,#ff4da6);
+
+color:white;
+
+text-align:center;
+
+}
+
+footer a{
+
+color:white;
+text-decoration:none;
+margin:5px;
+
+}
+
+footer a:hover{
+
+text-decoration:underline;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+</style>

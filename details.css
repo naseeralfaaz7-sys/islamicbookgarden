@@ -1,0 +1,73 @@
+body{
+font-family: Arial;
+background: linear-gradient(135deg,#ffffff,#ffd6f0,#d6e8ff);
+padding:20px;
+}
+
+/* Title */
+h1{
+text-align:center;
+margin-bottom:20px;
+}
+
+/* Navigation */
+nav{
+text-align:center;
+margin-bottom:30px;
+}
+
+nav a{
+text-decoration:none;
+padding:10px 20px;
+margin:5px;
+background:#6a5acd;
+color:white;
+border-radius:8px;
+font-weight:bold;
+display:inline-block;
+transition:all 0.4s ease;
+}
+
+nav a:hover{
+background:#ff4da6;
+transform:scale(1.1);
+}
+
+/* Book table design */
+.book{
+width:60%;
+margin:30px auto;
+border-collapse:collapse;
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 6px 15px rgba(0,0,0,0.15);
+transition:all 0.4s ease;
+}
+
+/* Hover animation for whole table */
+.book:hover{
+transform:scale(1.03);
+box-shadow:0 12px 25px rgba(0,0,0,0.25);
+}
+
+/* Table header */
+.book th{
+background:linear-gradient(45deg,#6a5acd,#ff4da6);
+color:white;
+font-size:22px;
+padding:14px;
+}
+
+/* Table data */
+.book td{
+border:1px solid #ddd;
+padding:14px;
+font-size:16px;
+transition:background 0.3s;
+}
+
+/* Row hover effect */
+.book tr:hover td{
+background:#ffe6f5;
+}

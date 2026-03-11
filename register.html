@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Register</title>
+
+<style>
+
+body{
+font-family: Arial;
+background: linear-gradient(135deg,#6a5acd,#ff4da6);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.register-box{
+background:white;
+padding:40px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+width:300px;
+text-align:center;
+}
+
+.register-box h2{
+margin-bottom:20px;
+}
+
+.register-box input{
+width:100%;
+padding:10px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+.register-box button{
+width:100%;
+padding:10px;
+background:#6a5acd;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+font-size:16px;
+}
+
+.register-box button:hover{
+background:#ff4da6;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="register-box">
+
+<h2>Create Account</h2>
+
+<input type="text" id="newUser" placeholder="Username">
+
+<input type="password" id="newPass" placeholder="Password">
+
+<button onclick="register()">Register</button>
+
+<p>Already have account? <a href="login.html">Login</a></p>
+
+</div>
+
+<script>
+
+function register(){
+
+let user=document.getElementById("newUser").value;
+let pass=document.getElementById("newPass").value;
+
+if(user=="" || pass==""){
+alert("Please fill all fields");
+return;
+}
+
+localStorage.setItem("username",user);
+localStorage.setItem("password",pass);
+
+alert("Registration Successful");
+
+window.location.href="login.html";
+
+}
+
+</script>
+
+</body>
+</html>

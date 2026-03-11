@@ -1,0 +1,368 @@
+<html>
+<head>
+
+<title>
+ISLAMIC BOOK GARDEN-BOOKS
+</title>
+
+<link rel="stylesheet" href="book style.css">
+
+<script src="script1.js"></script>
+
+<script src="script3.js"></script>
+
+<script src="BOOK.js"></script>
+
+</head>
+
+<body>
+
+<div id="loader">
+Loading...
+</div>
+
+<nav>
+
+<a href="home.html">HOME</a>
+
+<a href="cart.html">CART (<span id="cart-count">0</span>)</a>
+
+<a href="contact.html">CONTACT</a>
+
+<center>
+
+<input type="text" id="searchBox" placeholder="Search books..." onkeyup="searchBooks()">
+
+</center>
+
+</nav>
+
+<p align="center">
+<b>
+<font face="Georgia" size="6">
+📓WELCOME TO OUR ISLAMIC BOOKS GARDEN ! EXPLORE AUTHENTIC BOOKS ON DHUAS , QUR'AAN AND FIQH LAW TO ENRICH YOUR KNOWLEDGE AND FAITH.
+</font>
+</b>
+</p>
+
+<h2 align="center"><font size="6">POPULAR BOOKS</font></h2>
+
+<table border="2" width="95%" align="center" cellpadding="20" style="font-size:20px;">
+
+<tr>
+<th>BOOK</th>
+<th>BOOK DETAILS</th>
+<th>CATEGORY</th>
+<th>ADD</th>
+<th>RATE</th>
+</tr>
+
+<tr>
+
+<td align="center">
+<img src="book 1.jpg" width="170">
+</td>
+
+<td>
+<strong>DAILY DHUAS</strong><br><br>
+SHORT DESCRIPTION : A COLLECTION OF DAILY SUPPLICATIONS FOR EVERY DAY LIFE.
+</td>
+
+<td align="center">
+DHUAS
+</td>
+
+<td align="center">
+<button onclick="addToCart('Daily Dhuas','Dhuas',200)">Add to Cart</button>
+</td>
+
+<td align="center">
+
+<select id="rating1">
+<option value="">Rate</option>
+<option>⭐</option>
+<option>⭐⭐</option>
+<option>⭐⭐⭐</option>
+<option>⭐⭐⭐⭐</option>
+<option>⭐⭐⭐⭐⭐</option>
+</select>
+
+<br><br>
+
+<button onclick="sendRating('Daily Dhuas','rating1')">
+Send
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td align="center">
+<img src="book 2.jpeg" width="170">
+</td>
+
+<td>
+<strong>FIQH</strong><br><br>
+SHORT DESCRIPTION : COMPREHENSIVE GUIDE ON ISLAMIC LAWS AND RULING.
+</td>
+
+<td align="center">
+ISLAMIC JURISPRUDENCE
+</td>
+
+<td align="center">
+<button onclick="addToCart('Fiqh','Islamic Jurisprudence',250)">Add to Cart</button>
+</td>
+
+<td align="center">
+
+<select id="rating2">
+<option value="">Rate</option>
+<option>⭐</option>
+<option>⭐⭐</option>
+<option>⭐⭐⭐</option>
+<option>⭐⭐⭐⭐</option>
+<option>⭐⭐⭐⭐⭐</option>
+</select>
+
+<br><br>
+
+<button onclick="sendRating('Fiqh','rating2')">
+Send
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td align="center">
+<img src="book 3.jpeg" width="170">
+</td>
+
+<td>
+<strong>NURANI QAIDHA - PART 4</strong><br><br>
+SHORT DESCRIPTION : BASIC QUR'AAN LEARNING GUIDE FOR CHILDREN - PART 4.
+</td>
+
+<td align="center">
+KIDS QUR'AAN
+</td>
+
+<td align="center">
+<button onclick="addToCart('Nurani Qaidha Part 4','Kids Quran',150)">Add to Cart</button>
+</td>
+
+<td align="center">
+
+<select id="rating3">
+<option value="">Rate</option>
+<option>⭐</option>
+<option>⭐⭐</option>
+<option>⭐⭐⭐</option>
+<option>⭐⭐⭐⭐</option>
+<option>⭐⭐⭐⭐⭐</option>
+</select>
+
+<br><br>
+
+<button onclick="sendRating('Nurani Qaidha Part 4','rating3')">
+Send
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td align="center">
+<img src="book4.jpeg" width="170">
+</td>
+
+<td>
+<strong>NURANI QAIDHA - PART 5</strong><br><br>
+SHORT DESCRIPTION : BASIC QUR'AAN LEARNING GUIDE FOR CHILDREN - PART 5.
+</td>
+
+<td align="center">
+KIDS QUR'AAN
+</td>
+
+<td align="center">
+<button onclick="addToCart('Nurani Qaidha Part 5','Kids Quran',150)">Add to Cart</button>
+</td>
+
+<td align="center">
+
+<select id="rating4">
+<option value="">Rate</option>
+<option>⭐</option>
+<option>⭐⭐</option>
+<option>⭐⭐⭐</option>
+<option>⭐⭐⭐⭐</option>
+<option>⭐⭐⭐⭐⭐</option>
+</select>
+
+<br><br>
+
+<button onclick="sendRating('Nurani Qaidha Part 5','rating4')">
+Send
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td align="center">
+<img src="book 5.jpeg" width="170">
+</td>
+
+<td>
+<strong>NURANI QAIDHA - PART 2</strong><br><br>
+SHORT DESCRIPTION : BASIC QUR'AAN LEARNING GUIDE FOR CHILDREN - PART 2.
+</td>
+
+<td align="center">
+KIDS QUR'AAN
+</td>
+
+<td align="center">
+<button onclick="addToCart('Nurani Qaidha Part 2','Kids Quran',150)">Add to Cart</button>
+</td>
+
+<td align="center">
+
+<select id="rating5">
+<option value="">Rate</option>
+<option>⭐</option>
+<option>⭐⭐</option>
+<option>⭐⭐⭐</option>
+<option>⭐⭐⭐⭐</option>
+<option>⭐⭐⭐⭐⭐</option>
+</select>
+
+<br><br>
+
+<button onclick="sendRating('Nurani Qaidha Part 2','rating5')">
+Send
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td align="center">
+<img src="book 6.jpeg" width="170">
+</td>
+
+<td>
+<strong>NURANI QAIDHA - PART 3</strong><br><br>
+SHORT DESCRIPTION : BASIC QUR'AAN LEARNING GUIDE FOR CHILDREN - PART 3.
+</td>
+
+<td align="center">
+KIDS QUR'AAN
+</td>
+
+<td align="center">
+<button onclick="addToCart('Nurani Qaidha Part 3','Kids Quran',150)">Add to Cart</button>
+</td>
+
+<td align="center">
+
+<select id="rating6">
+<option value="">Rate</option>
+<option>⭐</option>
+<option>⭐⭐</option>
+<option>⭐⭐⭐</option>
+<option>⭐⭐⭐⭐</option>
+<option>⭐⭐⭐⭐⭐</option>
+</select>
+
+<br><br>
+
+<button onclick="sendRating('Nurani Qaidha Part 3','rating6')">
+Send
+</button>
+
+</td>
+
+</tr>
+
+</table>
+
+<br><br>
+
+<h2 class="hello">Admin Added Books</h2>
+
+<div id="bookContainer"></div>
+
+<br><br>
+
+<center>
+<a href="details.html">
+<button>VIEW DETAILS</button>
+</a>
+</center>
+
+<a href="https://wa.me/94750144712" class="whatsapp-float" target="_blank">
+💬
+</a>
+
+<script>
+
+window.onload=function(){
+
+document.getElementById("loader").style.display="none"
+
+let books=JSON.parse(localStorage.getItem("books"))||[]
+
+let container=document.getElementById("bookContainer")
+
+books.forEach(function(book){
+
+container.innerHTML+=`
+
+<div class="admin-book-card">
+
+<img src="${book.image}" width="150">
+
+<h3>${book.name}</h3>
+
+<p>Price : Rs.${book.price}</p>
+
+<button onclick="addToCart('${book.name}','Admin Book',${book.price})">
+
+Add to Cart
+
+</button>
+
+</div>
+
+`
+
+})
+
+}
+
+</script>
+
+<footer>
+
+<p>© 2026 Islamic Book Garden</p>
+
+
+
+
+</footer>
+
+</body>
+</html>

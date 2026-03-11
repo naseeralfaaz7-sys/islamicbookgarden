@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Islamic Book Garden - Cart</title>
+
+<link rel="stylesheet" href="cart style.css">
+
+<script src="script1.js"></script>
+
+</head>
+
+<body>
+<div id="loader">
+Loading...
+</div>
+<h1>Islamic Book Garden - Cart</h1>
+
+<nav>
+<a href="home.html">Home</a>
+<a href="book.html">Books</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<p style="color:white;">Your selected books:</p>
+
+<table>
+
+<thead>
+<tr>
+<th>Book Name</th>
+<th>Category</th>
+<th>Quantity</th>
+<th>Price (Rs.)</th>
+<th>Remove</th>
+</tr>
+</thead>
+
+<tbody>
+
+</tbody>
+
+</table>
+
+<h2 id="total">Total: Rs. 0</h2>
+
+<button id="checkout">Checkout</button>
+
+<br><br>
+
+<!-- ORDER FORM -->
+
+<div class="order-box">
+
+<h2 style="color:white;">Customer Details</h2>
+
+<input type="text" id="name" placeholder="Enter Your Name"><br><br>
+
+<input type="text" id="phone" placeholder="Enter Phone Number"><br><br>
+
+<input type="text" id="location" placeholder="Enter Location / Address"><br><br>
+
+<button onclick="sendOrder()" style="background:green;">Order on WhatsApp</button>
+
+</div>
+<a href="https://wa.me/94750144712" class="whatsapp-float" target="_blank">
+💬
+</a>
+
+<script>
+window.onload = function(){
+document.getElementById("loader").style.display = "none";
+}
+</script>
+<footer>
+
+<p>© 2026 Islamic Book Garden</p>
+
+
+
+</footer>
+</body>
+</html>
